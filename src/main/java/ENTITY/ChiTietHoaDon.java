@@ -47,6 +47,11 @@ public class ChiTietHoaDon {
     public void setSoLuong(int soLuong) {
         this.soLuong = soLuong;
     }
+
+    @Override
+    public String toString() {
+        return "ChiTietHoaDon{" + "hoaDon=" + hoaDon + ", phong=" + phong + ", soLuong=" + soLuong + '}';
+    }
     
     
 }

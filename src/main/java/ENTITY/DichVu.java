@@ -4,6 +4,9 @@
  */
 package ENTITY;
 
+import java.text.DecimalFormat;
+import java.time.format.DateTimeFormatter;
+
 /**
  *
  * @author 84837
@@ -65,6 +68,13 @@ public class DichVu {
 
     public void setDonViTinh(String donViTinh) {
         this.donViTinh = donViTinh;
+    }
+
+    @Override
+    public String toString() {
+        DateTimeFormatter formatter= DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DecimalFormat dFormat = new DecimalFormat("#,###.##$");
+        return "DichVu{" + "maDichvu=" + maDichvu + ", tenDichVu=" + tenDichVu + ", soLuong=" + soLuong + ", donGia=" + dFormat.format(this.donGia) + ", donViTinh=" + donViTinh + '}';
     }
     
     

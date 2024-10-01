@@ -4,6 +4,8 @@
  */
 package ENTITY;
 
+import java.util.Objects;
+
 /**
  *
  * @author 84837
@@ -65,6 +67,33 @@ public class KhachHang {
 
     public void setDienThoai(String dienThoai) {
         this.dienThoai = dienThoai;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(maKhachHang);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final KhachHang other = (KhachHang) obj;
+        return Objects.equals(this.maKhachHang, other.maKhachHang);
+    }
+    
+    
+
+    @Override
+    public String toString() {
+        return "KhachHang{" + "maKhachHang=" + maKhachHang + ", tenKhachHang=" + tenKhachHang + ", CCCD=" + CCCD + ", phai=" + phai + ", dienThoai=" + dienThoai + '}';
     }
     
     

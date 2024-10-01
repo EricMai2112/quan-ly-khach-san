@@ -4,6 +4,8 @@
  */
 package ENTITY;
 
+import java.util.Objects;
+
 /**
  *
  * @author 84837
@@ -15,7 +17,6 @@ public class Phong {
     private TrangThaiPhong trangThaiPhong;
     
     public Phong(){
-        
     }
 
     public Phong(String maPhong, LoaiPhong loaiPhong, int soNguoi, TrangThaiPhong trangThaiPhong) {
@@ -55,6 +56,33 @@ public class Phong {
 
     public void setTrangThaiPhong(TrangThaiPhong trangThaiPhong) {
         this.trangThaiPhong = trangThaiPhong;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(maPhong);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Phong other = (Phong) obj;
+        return Objects.equals(this.maPhong, other.maPhong);
+    }
+    
+    
+
+    @Override
+    public String toString() {
+        return "Phong{" + "maPhong=" + maPhong + ", loaiPhong=" + loaiPhong + ", soNguoi=" + soNguoi + ", trangThaiPhong=" + trangThaiPhong + '}';
     }
     
     

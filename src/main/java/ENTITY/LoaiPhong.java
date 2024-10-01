@@ -4,6 +4,9 @@
  */
 package ENTITY;
 
+import java.text.DecimalFormat;
+import java.time.format.DateTimeFormatter;
+
 /**
  *
  * @author 84837
@@ -45,6 +48,13 @@ public class LoaiPhong {
 
     public void setGiaTien(Double giaTien) {
         this.giaTien = giaTien;
+    }
+
+    @Override
+    public String toString() {
+        DateTimeFormatter formatter= DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DecimalFormat dFormat = new DecimalFormat("#,###.##$");
+        return "LoaiPhong{" + "maLoaiPhong=" + maLoaiPhong + ", tenLoaiPhong=" + tenLoaiPhong + ", giaTien=" + dFormat.format(this.giaTien) + '}';
     }
     
     

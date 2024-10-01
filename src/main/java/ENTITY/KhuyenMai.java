@@ -4,7 +4,9 @@
  */
 package ENTITY;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  *
@@ -77,6 +79,15 @@ public class KhuyenMai {
 
     public void setChietKhau(int chietKhau) {
         this.chietKhau = chietKhau;
+    }
+    
+    
+
+    @Override
+    public String toString() {
+        DateTimeFormatter formatter= DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DecimalFormat dFormat = new DecimalFormat("#,###.##$");
+        return "KhuyenMai{" + "makhuyenMai=" + makhuyenMai + ", moTa=" + moTa + ", ngayBatDau=" + ngayBatDau.format(formatter) + ", ngayKetThuc=" + ngayKetThuc.format(formatter) + ", trangThai=" + trangThai + ", chietKhau=" + dFormat.format(this.chietKhau) + '}';
     }
     
     

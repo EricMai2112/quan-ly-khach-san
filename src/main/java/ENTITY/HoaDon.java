@@ -4,7 +4,10 @@
  */
 package ENTITY;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 /**
  *
@@ -113,6 +116,35 @@ public class HoaDon {
 
     public void setTongTien(Double tongTien) {
         this.tongTien = tongTien;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(maHoaDon);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final HoaDon other = (HoaDon) obj;
+        return Objects.equals(this.maHoaDon, other.maHoaDon);
+    }
+    
+    
+
+    @Override
+    public String toString() {
+        DateTimeFormatter formatter= DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DecimalFormat dFormat = new DecimalFormat("#,###.##$");
+        return "HoaDon{" + "maHoaDon=" + maHoaDon + ", khuyenMai=" + khuyenMai + ", nhanVienLap=" + nhanVienLap + ", khachHang=" + khachHang + ", ngayLap=" + ngayLap.format(formatter) + ", ngayNhanPhong=" + ngayNhanPhong.format(formatter) + ", ngayTraPhong=" + ngayTraPhong.format(formatter) + ", thue=" + thue + ", tienTraKhach=" + dFormat.format(this.tienTraKhach) + ", tongTien=" + dFormat.format(this.tongTien) + '}';
     }
     
     
