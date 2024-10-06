@@ -4,6 +4,8 @@
  */
 package GUI;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author 84837
@@ -15,7 +17,10 @@ public class LOGIN_GUI extends javax.swing.JFrame {
      */
     public LOGIN_GUI() {
         initComponents();
+        
+        setLocationRelativeTo(null);
         setupUI(); 
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     /**
