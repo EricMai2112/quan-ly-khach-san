@@ -8,17 +8,17 @@ package ENTITY;
  *
  * @author 84837
  */
-public enum LoaiNhanVien {
-    NV_QUANLY("Nhan vien quan ly"), NV_LETAN("Nhan vien le tan");
+public enum TinhTrangPhong {
+    PHONG_SACH("Phong da duoc don sach se"), PHONG_CHUA_DON("Phong chua duoc ve sinh sach se");
     
-    private String loaiNhanVien;
+    private String tinhTrangPhong;
 
-    LoaiNhanVien(String loaiNhanVien) {
-        this.loaiNhanVien = loaiNhanVien;
+    TinhTrangPhong(String tinhTrangPhong) {
+        this.tinhTrangPhong = tinhTrangPhong;
     }
 
     @Override
     public String toString() {
-        return loaiNhanVien;
+        return tinhTrangPhong;
     }
 }
