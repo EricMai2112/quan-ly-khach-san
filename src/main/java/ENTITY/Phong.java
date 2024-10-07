@@ -15,6 +15,7 @@ public class Phong {
     private LoaiPhong loaiPhong;
     private int soNguoi;
     private TrangThaiPhong trangThaiPhong;
+    private TinhTrangPhong tinhTrangPhong;
     
     public Phong(){
     }
@@ -58,6 +59,15 @@ public class Phong {
         this.trangThaiPhong = trangThaiPhong;
     }
 
+    public TinhTrangPhong getTinhTrangPhong() {
+        return tinhTrangPhong;
+    }
+
+    public void setTinhTrangPhong(TinhTrangPhong tinhTrangPhong) {
+        this.tinhTrangPhong = tinhTrangPhong;
+    }
+    
+
     @Override
     public int hashCode() {
         return Objects.hash(maPhong);
@@ -77,13 +87,9 @@ public class Phong {
         final Phong other = (Phong) obj;
         return Objects.equals(this.maPhong, other.maPhong);
     }
-    
-    
 
     @Override
     public String toString() {
-        return "Phong{" + "maPhong=" + maPhong + ", loaiPhong=" + loaiPhong + ", soNguoi=" + soNguoi + ", trangThaiPhong=" + trangThaiPhong + '}';
-    }
-    
-    
+        return "Phong{" + "maPhong=" + maPhong + ", loaiPhong=" + loaiPhong + ", soNguoi=" + soNguoi + ", trangThaiPhong=" + trangThaiPhong + ", tinhTrangPhong=" + tinhTrangPhong + '}';
+    }  
 }
