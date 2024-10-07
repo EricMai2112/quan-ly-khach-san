@@ -19,7 +19,6 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         initComponents();
         
         setLocationRelativeTo(null);
-        setupUI(); 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
@@ -47,6 +46,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         txtName = new javax.swing.JTextField();
         txtPassword = new javax.swing.JPasswordField();
         iconHide = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -58,7 +58,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("TQSN");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGE/logo.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/IMAGE/logo.png"))); // NOI18N
         jLabel10.setText("jLabel10");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -96,24 +96,28 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 51, 414, 47));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jLabel5.setLabelFor(txtName);
         jLabel5.setText("Username");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 136, 335, 24));
 
         jLabel2.setText("_____________________________________________________________");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 181, 309, 20));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGE/user.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/IMAGE/user.png"))); // NOI18N
+        jLabel6.setLabelFor(txtName);
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 178, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jLabel7.setLabelFor(txtPassword);
         jLabel7.setText("Password");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 219, 335, 24));
 
         jLabel8.setText("______________________________________________________________");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 268, 321, -1));
 
-        iconShow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGE/eye.png"))); // NOI18N
+        iconShow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/IMAGE/eye.png"))); // NOI18N
+        iconShow.setLabelFor(txtPassword);
         iconShow.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         iconShow.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -127,7 +131,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("LOGIN");
         btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 347, 38));
+        jPanel2.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 347, 38));
 
         txtName.setFont(txtName.getFont().deriveFont(txtName.getFont().getSize()+2f));
         txtName.setBorder(null);
@@ -137,7 +141,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         txtPassword.setBorder(null);
         jPanel2.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 242, 300, 40));
 
-        iconHide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGE/password.png"))); // NOI18N
+        iconHide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/IMAGE/password.png"))); // NOI18N
         iconHide.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         iconHide.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -146,9 +150,17 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         });
         jPanel2.add(iconHide, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 261, -1, 23));
 
+        jCheckBox1.setText("Remember Password");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 410, 440));
 
-        setSize(new java.awt.Dimension(878, 442));
+        setSize(new java.awt.Dimension(883, 442));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -157,7 +169,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         iconHide.setVisible(false);
         iconHide.setEnabled(false);
         iconShow.setVisible(true);
-        iconShow.setEnabled(true);   
+        iconShow.setEnabled(true);
     }//GEN-LAST:event_iconHideMouseClicked
 
     private void iconShowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconShowMouseClicked
@@ -168,9 +180,10 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         iconShow.setEnabled(false);
     }//GEN-LAST:event_iconShowMouseClicked
 
-     private void setupUI() {
-         
-     }
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -210,6 +223,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel iconHide;
     private javax.swing.JLabel iconShow;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
