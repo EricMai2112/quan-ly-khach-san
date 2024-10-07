@@ -142,5 +142,3 @@ public class NhanVien {
         return "NhanVien{" + "maNhanVien=" + maNhanVien + ", tenNhanVien=" + tenNhanVien + ", loaiNhanVien=" + loaiNhanVien + ", phai=" + phai + ", ngaySinh=" + ngaySinh.format(formatter) + ", password=" + password + ", CCCD=" + CCCD + ", soDienThoai=" + soDienThoai + ", trangThai=" + trangThai + '}';
     }
 }
-
-/*test test test*/
