@@ -254,5 +254,4 @@ public class LOGIN_GUI extends javax.swing.JFrame {
     private javax.swing.JTextField txtName;
     private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables
-    //test
 }
