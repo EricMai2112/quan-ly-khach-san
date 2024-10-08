@@ -58,7 +58,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("TQSN");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/IMAGE/logo.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGE/logo.png"))); // NOI18N
         jLabel10.setText("jLabel10");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -237,5 +237,4 @@ public class LOGIN_GUI extends javax.swing.JFrame {
     private javax.swing.JTextField txtName;
     private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables
-
 }
