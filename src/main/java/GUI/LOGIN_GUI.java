@@ -4,6 +4,7 @@
  */
 package GUI;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /**
@@ -59,7 +60,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("TQSN");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGE/logo.png"))); // NOI18N
+        jLabel10.setIcon( new ImageIcon(getClass().getResource("/IMAGE/logo.png"))); 
         jLabel10.setText("jLabel10");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -115,7 +116,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         jLabel2.setText("_____________________________________________________________");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 181, 309, 20));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/IMAGE/user.png"))); // NOI18N
+        jLabel6.setIcon( new ImageIcon(getClass().getResource("/IMAGE/user.png")));  // NOI18N
         jLabel6.setLabelFor(txtName);
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 178, -1, -1));
@@ -128,7 +129,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         jLabel8.setText("______________________________________________________________");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 268, 321, -1));
 
-        iconShow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/IMAGE/eye.png"))); // NOI18N
+        iconShow.setIcon(new ImageIcon(getClass().getResource("/IMAGE/eye.png"))); // NOI18N
         iconShow.setLabelFor(txtPassword);
         iconShow.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         iconShow.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -153,7 +154,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         txtPassword.setBorder(null);
         jPanel2.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 242, 300, 40));
 
-        iconHide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/IMAGE/password.png"))); // NOI18N
+        iconHide.setIcon(new ImageIcon(getClass().getResource("/IMAGE/password.png"))); // NOI18N
         iconHide.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         iconHide.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -254,4 +255,5 @@ public class LOGIN_GUI extends javax.swing.JFrame {
     private javax.swing.JTextField txtName;
     private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables
+
 }
