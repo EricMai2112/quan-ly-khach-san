@@ -33,10 +33,8 @@ public class LOGIN_GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -49,59 +47,24 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         txtPassword = new javax.swing.JPasswordField();
         iconHide = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(27, 41, 189));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 32)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("TQSN");
-
-        jLabel10.setIcon( new ImageIcon(getClass().getResource("/IMAGE/logo.png"))); 
-        jLabel10.setText("");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(183, 183, 183)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(115, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGE/Webp.net-resizeimage.png"))); // NOI18N
+        jLabel10.setText("jLabel10");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(0, 0, 470, 440);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 440));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("x");
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
-            }
-        });
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(377, 0, 37, 33));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -116,7 +79,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         jLabel2.setText("_____________________________________________________________");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 181, 309, 20));
 
-        jLabel6.setIcon( new ImageIcon(getClass().getResource("/IMAGE/user.png")));  // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/IMAGE/user.png"))); // NOI18N
         jLabel6.setLabelFor(txtName);
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 178, -1, -1));
@@ -128,17 +91,8 @@ public class LOGIN_GUI extends javax.swing.JFrame {
 
         jLabel8.setText("______________________________________________________________");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 268, 321, -1));
-        
-        iconHide.setIcon(new ImageIcon(getClass().getResource("/IMAGE/password.png"))); // NOI18N
-        iconHide.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        iconHide.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                iconHideMouseClicked(evt);
-            }
-        });
-        jPanel2.add(iconHide, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 261, -1, 23));
 
-        iconShow.setIcon(new ImageIcon(getClass().getResource("/IMAGE/eye.png"))); // NOI18N
+        iconShow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/IMAGE/eye.png"))); // NOI18N
         iconShow.setLabelFor(txtPassword);
         iconShow.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         iconShow.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -163,6 +117,14 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         txtPassword.setBorder(null);
         jPanel2.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 242, 300, 40));
 
+        iconHide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/IMAGE/password.png"))); // NOI18N
+        iconHide.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        iconHide.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconHideMouseClicked(evt);
+            }
+        });
+        jPanel2.add(iconHide, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 261, -1, 23));
 
         jCheckBox1.setText("Remember Password");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -171,6 +133,9 @@ public class LOGIN_GUI extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGE/logo.png"))); // NOI18N
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, -1, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 410, 440));
 
@@ -245,7 +210,6 @@ public class LOGIN_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
