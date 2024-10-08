@@ -169,7 +169,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_iconHideMouseClicked
 
     private void iconShowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconShowMouseClicked
-        txtPassword.setEchoChar((char)8226);
+        txtPassword.setEchoChar('*');
         iconShow.setVisible(false);
         iconShow.setEnabled(false);
         iconHide.setVisible(true);
