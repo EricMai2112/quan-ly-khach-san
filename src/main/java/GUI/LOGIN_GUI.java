@@ -48,6 +48,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         iconHide = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
+        btnExit = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -56,7 +57,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGE/Webp.net-resizeimage.png"))); // NOI18N
+        jLabel10.setIcon(new ImageIcon(getClass().getResource("/IMAGE/hotel.png"))); // NOI18N
         jLabel10.setText("jLabel10");
         jPanel1.add(jLabel10);
         jLabel10.setBounds(0, 0, 470, 440);
@@ -76,10 +77,10 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         jLabel5.setText("Username");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 136, 335, 24));
 
-        jLabel2.setText("_____________________________________________________________");
+        jLabel2.setText("______________________________________________");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 181, 309, 20));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/IMAGE/user.png"))); // NOI18N
+        jLabel6.setIcon(new ImageIcon(getClass().getResource("/IMAGE/user.png"))); // NOI18N
         jLabel6.setLabelFor(txtName);
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 178, -1, -1));
@@ -89,10 +90,18 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         jLabel7.setText("Password");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 219, 335, 24));
 
-        jLabel8.setText("______________________________________________________________");
+        jLabel8.setText("______________________________________________");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 268, 321, -1));
+        
+        iconHide.setIcon(new ImageIcon(getClass().getResource("/IMAGE/password.png"))); // NOI18N
+        iconHide.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        iconHide.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconHideMouseClicked(evt);
+            }
+        });
 
-        iconShow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/IMAGE/eye.png"))); // NOI18N
+        iconShow.setIcon(new ImageIcon(getClass().getResource("/IMAGE/eye.png"))); // NOI18N
         iconShow.setLabelFor(txtPassword);
         iconShow.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         iconShow.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -117,13 +126,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         txtPassword.setBorder(null);
         jPanel2.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 242, 300, 40));
 
-        iconHide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/IMAGE/password.png"))); // NOI18N
-        iconHide.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        iconHide.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                iconHideMouseClicked(evt);
-            }
-        });
+        
         jPanel2.add(iconHide, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 261, -1, 23));
 
         jCheckBox1.setText("Remember Password");
@@ -134,8 +137,18 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         });
         jPanel2.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGE/logo.png"))); // NOI18N
+        jLabel1.setIcon(new ImageIcon(getClass().getResource("/IMAGE/logo.png"))); // NOI18N
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, -1, -1));
+
+        btnExit.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnExit.setText("x");
+        btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnExit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnExitMouseClicked(evt);
+            }
+        });
+        jPanel2.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 20, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 410, 440));
 
@@ -166,6 +179,10 @@ public class LOGIN_GUI extends javax.swing.JFrame {
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void btnExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExitMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_btnExitMouseClicked
 
     /**
      * @param args the command line arguments
@@ -203,6 +220,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel btnExit;
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel iconHide;
     private javax.swing.JLabel iconShow;
