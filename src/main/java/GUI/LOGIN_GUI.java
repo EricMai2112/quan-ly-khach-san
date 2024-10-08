@@ -36,6 +36,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -60,7 +61,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         jLabel1.setText("TQSN");
 
         jLabel10.setIcon( new ImageIcon(getClass().getResource("/IMAGE/logo.png"))); 
-        jLabel10.setText("jLabel10");
+        jLabel10.setText("");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -91,6 +92,17 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("x");
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(377, 0, 37, 33));
+
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("LOGIN");
@@ -116,6 +128,15 @@ public class LOGIN_GUI extends javax.swing.JFrame {
 
         jLabel8.setText("______________________________________________________________");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 268, 321, -1));
+        
+        iconHide.setIcon(new ImageIcon(getClass().getResource("/IMAGE/password.png"))); // NOI18N
+        iconHide.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        iconHide.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconHideMouseClicked(evt);
+            }
+        });
+        jPanel2.add(iconHide, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 261, -1, 23));
 
         iconShow.setIcon(new ImageIcon(getClass().getResource("/IMAGE/eye.png"))); // NOI18N
         iconShow.setLabelFor(txtPassword);
@@ -142,14 +163,6 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         txtPassword.setBorder(null);
         jPanel2.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 242, 300, 40));
 
-        iconHide.setIcon(new ImageIcon(getClass().getResource("/IMAGE/password.png"))); // NOI18N
-        iconHide.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        iconHide.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                iconHideMouseClicked(evt);
-            }
-        });
-        jPanel2.add(iconHide, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 261, -1, 23));
 
         jCheckBox1.setText("Remember Password");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -165,6 +178,10 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jLabel3MouseClicked
+
     private void iconHideMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconHideMouseClicked
         txtPassword.setEchoChar((char)0);
         iconHide.setVisible(false);
@@ -175,10 +192,10 @@ public class LOGIN_GUI extends javax.swing.JFrame {
 
     private void iconShowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconShowMouseClicked
         txtPassword.setEchoChar((char)8226);
-        iconHide.setVisible(true);
-        iconHide.setEnabled(true);
         iconShow.setVisible(false);
         iconShow.setEnabled(false);
+        iconHide.setVisible(true);
+        iconHide.setEnabled(true);
     }//GEN-LAST:event_iconShowMouseClicked
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
@@ -228,6 +245,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
