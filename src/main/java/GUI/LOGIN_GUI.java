@@ -19,6 +19,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
     public LOGIN_GUI() {
         initComponents();
         
+        
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
@@ -211,7 +212,7 @@ public class LOGIN_GUI extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
+        /* Create and display the form */ 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new LOGIN_GUI().setVisible(true);
