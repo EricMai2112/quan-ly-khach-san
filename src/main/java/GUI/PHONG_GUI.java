@@ -20,7 +20,6 @@ public class PHONG_GUI extends javax.swing.JFrame {
     public PHONG_GUI() {
         initComponents();
         
-        
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -50,6 +49,7 @@ public class PHONG_GUI extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JSeparator();
         btnTKGC = new javax.swing.JButton();
         btnTKGC1 = new javax.swing.JButton();
+        btnTKGC2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel7 = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -362,6 +362,23 @@ public class PHONG_GUI extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnTKGC1);
+
+        btnTKGC2.setBackground(new java.awt.Color(27, 41, 189));
+        btnTKGC2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnTKGC2.setForeground(new java.awt.Color(255, 255, 255));
+        btnTKGC2.setText("Báo cáo lễ tân");
+        btnTKGC2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnTKGC2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnTKGC2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnTKGC2.setMaximumSize(new java.awt.Dimension(200, 40));
+        btnTKGC2.setMinimumSize(new java.awt.Dimension(76, 30));
+        btnTKGC2.setPreferredSize(new java.awt.Dimension(76, 30));
+        btnTKGC2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTKGC2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnTKGC2);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_START);
 
@@ -1539,6 +1556,10 @@ public class PHONG_GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTKGCActionPerformed
 
+    private void btnTKGC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTKGC2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTKGC2ActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -1580,6 +1601,7 @@ public class PHONG_GUI extends javax.swing.JFrame {
     private javax.swing.JButton btnQLP;
     private javax.swing.JButton btnTKGC;
     private javax.swing.JButton btnTKGC1;
+    private javax.swing.JButton btnTKGC2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
