@@ -8,12 +8,12 @@ package ENTITY;
  *
  * @author 84837
  */
-public enum loaiNhanVien {
+public enum LoaiNhanVien {
     NV_QUANLY("Nhan vien quan ly"), NV_LETAN("Nhan vien le tan");
      
     private String loaiNhanVien;
 
-    loaiNhanVien(String loaiNhanVien) {
+    LoaiNhanVien(String loaiNhanVien) {
         this.loaiNhanVien = loaiNhanVien;
     }
 
